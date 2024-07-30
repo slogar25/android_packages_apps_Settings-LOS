@@ -194,7 +194,14 @@
             android:order="24"
             android:title="@string/heads_up_notifications_enabled_title"
             android:summary="@string/heads_up_notifications_enabled_summary" />
-
+            
+        <Preference
+            android:key="island_notification"
+            android:icon="@drawable/ic_message_fast"
+            android:title="@string/island_notification_title"
+            android:summary="@string/island_notification_summary"
+            android:fragment="com.android.settings.lineage.notifications.IslandSettings" />
+            
         <!-- Notification lights -->
         <lineageos.preference.LineagePartsPreference
             android:key="notification_lights"
