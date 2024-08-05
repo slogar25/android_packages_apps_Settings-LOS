@@ -15,12 +15,13 @@
      limitations under the License.
 -->
 <PreferenceScreen
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/island_notification_title">
 
-    <com.android.settings.development.GlobalSettingSwitchPreferenceController
+    <lineageos.preference.GlobalSettingSwitchPreference
         android:key="island_notification"
         android:title="@string/island_notification_title"
         android:summary="@string/island_notification_summary"
