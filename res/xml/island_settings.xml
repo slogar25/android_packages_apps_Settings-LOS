@@ -21,11 +21,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/island_notification_title">
 
-    <lineageos.preference.GlobalSettingSwitchPreference
+    <com.android.settings.support.SystemSettingSwitchPreference
         android:key="island_notification"
         android:title="@string/island_notification_title"
         android:summary="@string/island_notification_summary"
-        android:defaultValue="false" />
+		android:defaultValue="true" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="island_notification_footer"
