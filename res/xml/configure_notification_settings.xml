@@ -189,21 +189,34 @@
             settings:controller="com.android.settings.notification.PoliteNotificationsPreferenceController" />
 
         <!-- Heads up -->
+    <PreferenceCategory
+        android:key="notifications"
+        android:title="@string/heads_up_category_title">		
         <lineageos.preference.GlobalSettingSwitchPreference
             android:key="heads_up_notifications_enabled"
             android:order="24"
             android:title="@string/heads_up_notifications_enabled_title"
-            android:summary="@string/heads_up_notifications_enabled_summary" />
+            android:summary="@string/heads_up_notifications_enabled_summary" 
+	/>	
             
-        <Preference
-            android:key="notifications"
+        <com.lineage.support.preferences.SystemSettingSwitchPreference
+            android:key="island_notifications"
             android:order="25"
-            android:icon="@drawable/ic_message_fast"
             android:title="@string/island_notification_title"
             android:summary="@string/island_notification_summary"
-			android:dependency="heads_up_notifications_enabled"
-			android:fragment="com.android.settings.lineage.notifications.IslandSettings" />
-    
+	    android:dependency="heads_up_notifications_enabled"
+	    android:fragment="com.android.settings.lineage.notifications.IslandSettings"
+            android:defaultValue="true" 
+        />
+		
+	<com.android.settingslib.widget.FooterPreference
+            android:key="island_notification_footer"
+            android:title="@string/island_notification_footer_text"
+            android:selectable="false"
+            settings:searchable="false" 
+        />
+    </PreferenceCategory>	 
+			
         <!-- Notification lights -->
         <lineageos.preference.LineagePartsPreference
             android:key="notification_lights"

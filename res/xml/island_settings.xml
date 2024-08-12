@@ -25,7 +25,7 @@
         android:key="island_notification"
         android:title="@string/island_notification_title"
         android:summary="@string/island_notification_summary"
-		android:defaultValue="true" />
+	android:defaultValue="false" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="island_notification_footer"

@@ -37,7 +37,7 @@ public class IslandSettings extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.island_settings);
+        addPreferencesFromResource(R.xml.configure_notification_settings);
     }
 
     public static void reset(Context mContext) {
@@ -55,7 +55,7 @@ public class IslandSettings extends SettingsPreferenceFragment {
      * For search
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.island_settings) {
+            new BaseSearchIndexProvider(R.xml.configure_notification_settings) {
 
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
